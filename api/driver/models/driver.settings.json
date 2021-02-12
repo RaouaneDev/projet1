@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drivers",
+  "info": {
+    "name": "Driver",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "profile_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "descriptions": {
+      "type": "richtext"
+    }
+  }
+}
